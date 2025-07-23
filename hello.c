@@ -64,7 +64,7 @@ void main(void) {
     if (pp & PAD_A) {
       if (y == FLOOR_Y && !jump) {
         jump = true;
-        vy = -8;
+        vy = -4;
       }
     } 
     else {
@@ -107,7 +107,7 @@ void main(void) {
     }
     
     // Apply gravity
-    if (++frame % 2) vy += 1;
+    if (++frame % 4 == 0) vy += 1;
     
     // Update player position
     x += vx;
